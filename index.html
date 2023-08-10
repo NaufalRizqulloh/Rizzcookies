@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rizzcookies</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="scroll-smooth overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between relative py-1 px-4">
+          <div class="px-4 flex">
+            <a href="#home" class="font-bold text-lg text-primary block py-6">Rizzcookies.</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="scale-75 lg:hidden block absolute right-4">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left rotate-45;"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="text-primary lg:text-primary py-2 px-8 group-hover:underline underline-offset-8 group-hover:text-primary group-hover:font-semibold flex transition ease-in-out">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="text-primary lg:text-primary py-2 px-8 group-hover:underline underline-offset-8 group-hover:text-primary group-hover:font-semibold flex transition ease-in-out">About</a>
+                </li>
+                <li class="group">
+                  <a href="#cotd" class="text-primary lg:text-primary py-2 px-8 group-hover:underline underline-offset-8 group-hover:text-primary group-hover:font-semibold flex transition ease-in-out">Cookies Of The Day!</a>
+                </li>
+                <li class="group">
+                  <a href="#produk" class="text-primary lg:text-primary py-2 px-8 group-hover:underline underline-offset-8 group-hover:text-primary group-hover:font-semibold flex transition ease-in-out">Product</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="text-primary lg:text-primary py-2 px-8 group-hover:underline underline-offset-8 group-hover:text-primary group-hover:font-semibold flex transition ease-in-out">Contact</a>
+                </li>
+                <li id="account-text" class="group">
+                  <a
+                    href="#contact"
+                    class="lg:hidden text-primary lg:bg-primary bg-transparent rounded-full py-2 px-8 mx-auto lg:hover:border-primary lg:hover:border-2 lg:hover:bg-transparent lg:hover:text-primary group-hover:font-semibold flex"
+                    >Account</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <!-- search -->
+            <div class="search-form absolute top-[100%] bg-bgcolor rounded-full right-[7%] flex justify-center items-center border border-primary transform scale-y-0 origin-top">
+              <input class="py-3 lg:pr-12 pr-4 pl-4 bg-bgcolor rounded-full focus:outline-none" type="search" name="search" id="search-box" placeholder="Cari disini..." />
+              <label>
+                <i class="mr-4 lg:w-6 lg:h-6 text-primary w-5 h-5" data-feather="search"></i>
+              </label>
+            </div>
+            <button>
+              <i class="lg:ml-8 lg:mr-0 mr-4 lg:w-6 lg:h-6 inline-flex text-primary w-5 h-5" data-feather="search" id="search-button"></i>
+            </button>
+
+            <a href="./cart.html" target="_blank"><i class="lg:ml-8 mr-9 lg:w-6 lg:h-6 inline-flex text-primary w-5 h-5" data-feather="shopping-cart"></i></a>
+            <button class="lg:border-2 lg:border-primary lg:rounded-full">
+              <i id="account-icons" name="user" class="hidden lg:w-6 lg:h-6 lg:inline-flex text-primary w-5 h-5" data-feather="user"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Home -->
+    <section id="home" class="pt-36 pb-20 w-full bg-bgcolor">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:pl-12 lg:w-1/2">
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="font-black text-primary lg:leading-[72.6px] text-3xl lg:text-6xl text-center lg:text-start">
+              Satu Gigitan <br />
+              <span class="text-secondary">Rizzookies,</span>
+              Cocok untuk
+              <span class="text-secondary">Semua</span>
+            </h1>
+            <p data-aos="fade-down" data-aos-duration="1500" class="text-center mt-5 lg:mt-10 justify-center w-86 font-normal lg:text-2xl text-secondary lg:text-start">
+              Nikmati kue kering dengan rasa terbaik dan harga terjangkau, serta dibuat dengan cinta!
+            </p>
+            <div data-aos="fade-down" data-aos-duration="1700" class="flex lg:mt-10 justify-center lg:justify-start flex-shrink-0">
+              <a href="#cotd" class="bg-primary mt-5 px-8 py-4 text-sm lg:text-xl rounded-full text-bgcolor justify-center inline-flex"
+                >Jelajahi Lebih Lanjut<i class="my-auto ml-4 lg:w-6 lg:h-6 inline-flex text-bgcolor w-5 h-5" data-feather="arrow-down"></i
+              ></a>
+              <svg data-aos="fade-left" data-aos-duration="1800" width="360" height="84" viewBox="0 0 360 84" fill="none" class="hidden lg:scale-150 lg:translate-x-32 lg:translate-y-10 lg:inline-flex" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.559333 16.5458C0.32864 17.3415 0.786634 18.1735 1.58229 18.4042L14.5483 22.1636C15.3439 22.3943 16.176 21.9363 16.4067 21.1406C16.6374 20.345 16.1794 19.5129 15.3837 19.2822L3.85837 15.9406L7.20004 4.41524C7.43073 3.61958 6.97274 2.78756 6.17708 2.55687C5.38142 2.32617 4.5494 2.78417 4.31871 3.57983L0.559333 16.5458ZM91.9745 6.36774L91.5811 7.81524L91.5811 7.81524L91.9745 6.36774ZM134.178 38.1551L135.51 37.4647L135.51 37.4647L134.178 38.1551ZM140.643 64.914L139.213 64.461L139.213 64.461L140.643 64.914ZM118.195 69.9425L119.449 69.1207L118.195 69.9425ZM139.027 57.7304L138.718 59.1982L139.027 57.7304ZM215.353 78.922L215.099 80.4004L215.353 78.922ZM292.127 79.1914L291.93 77.7044L292.127 79.1914ZM339.27 64.1956L340.09 65.4517L340.09 65.4517L339.27 64.1956ZM359.059 47.9676C359.221 47.1552 358.694 46.365 357.882 46.2025L344.644 43.555C343.832 43.3925 343.042 43.9193 342.879 44.7316C342.717 45.544 343.243 46.3342 344.056 46.4967L355.823 48.8501L353.469 60.6171C353.307 61.4294 353.834 62.2196 354.646 62.3821C355.458 62.5446 356.249 62.0177 356.411 61.2054L359.059 47.9676ZM2.72334 18.2776C30.2174 3.14326 61.3214 -0.40751 91.5811 7.81524L92.3678 4.92023C61.3683 -3.50357 29.4624 0.1344 1.27666 15.6495L2.72334 18.2776ZM91.5811 7.81524C101.836 10.6019 109.612 13.5371 116.083 18.1501C122.529 22.7457 127.785 29.0839 132.846 38.8456L135.51 37.4647C130.293 27.403 124.756 20.6489 117.824 15.7073C110.917 10.7831 102.731 7.73622 92.3678 4.92023L91.5811 7.81524ZM132.846 38.8456C134.843 42.6958 137.111 47.0067 138.544 51.4667C139.976 55.9213 140.515 60.3528 139.213 64.461L142.073 65.367C143.639 60.4248 142.927 55.2997 141.401 50.5489C139.876 45.8036 137.478 41.2603 135.51 37.4647L132.846 38.8456ZM139.213 64.461C137.843 68.7866 134.222 72.1302 130.267 73.2731C126.409 74.3881 122.265 73.4195 119.449 69.1207L116.94 70.7643C120.545 76.2703 126.101 77.5996 131.1 76.1552C136.002 74.7388 140.395 70.6657 142.073 65.367L139.213 64.461ZM119.449 69.1207C117.063 65.4761 117.058 63.3386 117.676 62.0955C118.342 60.7576 120.063 59.7182 122.777 59.0807C128.117 57.8265 135.572 58.5354 138.718 59.1982L139.336 56.2626C135.967 55.5528 128.027 54.7661 122.091 56.1602C119.167 56.847 116.279 58.1677 114.99 60.7594C113.654 63.4458 114.348 66.8073 116.94 70.7643L119.449 69.1207ZM138.718 59.1982C151.557 61.9028 164.025 66.05 176.635 70.1145C189.215 74.1692 201.923 78.1367 215.099 80.4004L215.607 77.4437C202.666 75.2204 190.143 71.3163 177.555 67.2591C164.998 63.2117 152.362 59.0066 139.336 56.2626L138.718 59.1982ZM215.099 80.4004C240.209 84.7145 267.317 83.9979 292.325 80.6784L291.93 77.7044C267.122 80.9975 240.333 81.6918 215.607 77.4437L215.099 80.4004ZM292.325 80.6784C310.399 78.2792 324.356 75.7241 340.09 65.4517L338.45 62.9396C323.305 72.8272 309.913 75.3173 291.93 77.7044L292.325 80.6784ZM340.09 65.4517C343.774 63.0459 346.809 59.8942 349.665 56.9063C352.564 53.8731 355.268 51.0228 358.42 48.9215L356.756 46.4253C353.276 48.7454 350.339 51.8592 347.496 54.8334C344.61 57.8528 341.801 60.7515 338.45 62.9396L340.09 65.4517Z"
+                  fill="#8B6263"
+                  fill-opacity="0.37"
+                />
+              </svg>
+            </div>
+          </div>
+          <div data-aos="fade-down" data-aos-duration="1900" class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-5 lg:right-0 lg:mt-5"><img src="dist/img/hero-img.webp" alt="abimanyu" width="644" height="658" class="max-w-full mx-auto relative z-10" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-bgcolor">
+      <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 data-aos="fade-down" data-aos-duration="1000" class="text-3xl font-black text-primary sm:text-4xl">Telah <span class="text-secondary">Dipercaya</span> Dari Tahun Ke Tahun</h2>
+          <p data-aos="fade-down" data-aos-duration="1300" ss class="mt-4 text-secondary sm:text-xl">Nikmati kue kering lezat yang dibuat dengan tulus.</p>
+        </div>
+
+        <div class="mt-8 sm:mt-12">
+          <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="flex flex-col rounded-lg px-4 py-5 text-center">
+              <dt data-aos="fade-down" data-aos-duration="1500" class="order-last text-lg font-medium text-secondary">Produk Terjual Setiap Minggu</dt>
+
+              <dd data-aos="fade-down" data-aos-duration="1400" class="text-4xl font-extrabold text-primary md:text-5xl">500+</dd>
+            </div>
+
+            <div class="flex flex-col rounded-lg px-4 py-5 text-center">
+              <dt data-aos="fade-down" data-aos-duration="1500" class="order-last text-lg font-medium text-secondary">Pembuat Kue Professional</dt>
+
+              <dd data-aos="fade-down" data-aos-duration="1400" class="text-4xl font-extrabold text-primary md:text-5xl">20</dd>
+            </div>
+
+            <div class="flex flex-col rounded-lg px-4 py-5 text-center">
+              <dt data-aos="fade-down" data-aos-duration="1500" class="order-last text-lg font-medium text-secondary">Supplier</dt>
+
+              <dd data-aos="fade-down" data-aos-duration="1400" class="text-4xl font-extrabold text-primary md:text-5xl">100+</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section id="cotd" class="pt-12 pb-13 bg-bgcolor">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 pt-13 lg:pl-12">
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="font-black text-primary lg:leading-[72.6px] text-3xl lg:text-6xl text-center">
+              Rekomendasi <br />
+              <span class="text-secondary">Hari ini!</span>
+            </h1>
+            <p data-aos="fade-down" data-aos-duration="1700" class="text-center mt-5 lg:mt-8 mb-5 justify-center w-86 font-normal lg:text-2xl text-secondary">Ciptakan suasanamu dengan kue kami.</p>
+          </div>
+          <img src="./dist/img/wavepattern1.svg" class="hidden w-full lg:flex translate-y-60 z-10" alt="" />
+          <div class="flex flex-wrap justify-center">
+            <div class="w-full lg:px-1 px-4 lg:w-1/2 xl:w-1/3 z-40 lg:-translate-y-60 lg:pt-15 group lg:scale-75">
+              <a href="#" class="group relative rounded-2xl mt-5 block overflow-hidden">
+                <div class="relative bg-transparent p-6">
+                  <img src="./dist/img/cotd/Group 7.webp" alt="" width="813px" height="813px" />
+                  <h3 class="mt-4 text-xl lg:text-4xl text-center font-bold text-primary">Original Cookies</h3>
+                  <p class="mt-1.5 text-sm lg:text-2xl font-normal text-center text-secondary">
+                    Kue Kering Original <br />
+                    Favorit Semua Orang
+                  </p>
+                  <p class="mt-1.5 text-lg lg:text-2xl font-bold text-center text-secondary">Rp. 75.000/250gr</p>
+                  <form class="mt-4">
+                    <button class="w-full lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                      Beli Sekarang <i class="lg:w-6 ml-2 lg:h-6 text-bgcolor w-4 h-4" data-feather="shopping-cart" stroke-width="2.5"></i>
+                    </button>
+                  </form>
+                </div>
+              </a>
+            </div>
+
+            <div class="w-full lg:px-1 px-4 lg:w-1/2 xl:w-1/3 z-40 lg:pt-15 lg:-translate-y-60 group lg:scale-90">
+              <a href="#" class="group relative rounded-2xl mt-5 block overflow-hidden">
+                <div class="relative bg-transparent p-6">
+                  <img src="./dist/img/cotd/Group 5.webp" alt="" width="813px" height="813px" />
+                  <h3 class="mt-4 text-lg text-center lg:text-4xl font-bold text-primary">Dark Chocolate</h3>
+                  <p class="mt-2 text-sm lg:text-2xl font-normal text-center text-secondary">
+                    Kue Kering Dengan Rasa <br> Dark Chocolate Yang Menggoda
+                  </p>
+                  <p class="mt-2 text-lg lg:text-2xl font-bold text-center text-secondary">Rp. 75.000/250gr</p>
+                  <form class="mt-4">
+                    <button class="w-full lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                      Beli Sekarang <i class="lg:w-6 ml-2 lg:h-6 text-bgcolor w-4 h-4" data-feather="shopping-cart" stroke-width="2.5"></i>
+                    </button>
+                  </form>
+                </div>
+              </a>
+            </div>
+            <div class="w-full lg:px-1 px-4 lg:w-1/2 xl:w-1/3 z-40 lg:-translate-y-60 lg:pt-15 group lg:scale-75">
+              <a href="#" class="group relative rounded-2xl mt-5 block overflow-hidden">
+                <div class="relative bg-transparent p-6">
+                  <img src="./dist/img/cotd/Group 6.webp" alt="" width="813px" height="813px" />
+                  <h3 class="mt-4 text-xl text-center lg:text-4xl font-bold text-primary">Matcheese</h3>
+                  <p class="mt-2 text-sm lg:text-2xl font-normal text-center text-secondary">
+                    Perpaduan Matcha Yang <br />
+                    Creamy Serta Keju
+                  </p>
+                  <p class="mt-2 text-lg lg:text-2xl font-bold text-center text-secondary">Rp. 75.000/250gr</p>
+                  <form class="mt-4">
+                    <button class="w-full lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                      Beli Sekarang <i class="lg:w-6 ml-2 lg:h-6 text-bgcolor w-4 h-4" data-feather="shopping-cart" stroke-width="2.5"></i>
+                    </button>
+                  </form>
+                </div>
+              </a>
+            </div>
+            <div class="flex lg:mt-5 justify-center lg:justify-start group lg:-translate-y-60">
+              <a href="" target="_blank" class="bg-primary hover:bg-secondary transition mt-5 px-7 py-4 lg:text-xl rounded-full text-bgcolor justify-center inline-flex"
+                >Produk Lainnya<i class="ml-3 lg:w-6 lg:h-6 inline-flex text-bgcolor w-5 h-5 group-hover:translate-x-3 transition ease-linear" data-feather="arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="pb-12 pt-16 lg:pt-0 bg-bgcolor">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div data-aos="zoom-in" data-aos-duration="1500" class="w-full self-start px-4 lg:w-1/2 lg:pb-10">
+            <div class="relative lg:right-0"><img src="dist/img/about-img.webp" alt="abimanyu" width="807" height="703" class="max-w-full mx-auto relative z-10" /></div>
+          </div>
+          <div class="w-full self-center px-4 mt-10 lg:mt-0 lg:pl-16 lg:w-1/2">
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="text-center text-3xl font-black lg:text-6xl lg:text-start text-primary">
+              Lezat, <span class="text-secondary">Praktis &</span> <br />
+              Murah <span class="text-secondary"></span>
+            </h1>
+            <p data-aos="fade-down" data-aos-duration="1700" class="text-center mt-9 text-normal text-sm lg:text-xl lg:text-start text-secondary">
+              Kue Rizzcookies dibuat dengan bahan terbaik oleh ahli kue kami untuk menciptakan rasa cookies yang khas. <br />
+              Kami berusaha untuk menyajikan produk produk terbaik kami untuk anda.
+            </p>
+            <div data-aos="fade-down" data-aos-duration="1800" class="flex lg:mt-5 justify-center lg:justify-start">
+              <a href="./about.html" target="_blank" class="bg-primary hover:bg-secondary transition mt-5 px-7 py-4 lg:text-xl rounded-full text-bgcolor justify-center inline-flex"
+                >Perjalanan Kami!<i class="ml-3 lg:w-6 lg:h-6 inline-flex text-bgcolor w-5 h-5" data-feather="arrow-up-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="produk" class="lg:pt-36 pt-16 pb-20 bg-bgcolor">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center mb-13">
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="font-black text-primary lg:leading-[72.6px] text-3xl lg:text-6xl text-center">
+              Produk Tercinta <br />
+              <span class="text-secondary">Kami!</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-down" data-aos-duration="1500" class="swiper mt-20 w-full">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/almond.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Almond Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/chocolate.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Chocolate Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/cream-chip.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Marshmellow Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/macheese.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Matcha Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/marshmellow.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Cookies And Cream</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/original.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Original Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/redvelvet.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Red Velvet Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/peanutbutter.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Peanut Butter Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product/sugarcookie.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">Sugar Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="grid-cols-1">
+              <img class="w-52 mx-auto lg:w-64 lg:mx-auto" src="./dist/img/product//white-chocolate-cookie.webp" alt="" />
+              <h2 class="font-bold text-primary text-center text-xl lg:text-center mt-3">White Choco Cookies</h2>
+              <h2 class="text-secondary font-normal text-center lg:text-center">Rp. 75.000,00 <br> /250gr</h2>
+              <div class="button text-center">
+                <button class="bg-primary py-2.5 px-5 rounded-full text-bgcolor text-center mt-5 mx-auto">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-20 pb-20 bg-bgcolor px-3">
+      <div data-aos="zoom-in" data-aos-duration="1500" class="container h-[400px] lg:w-3/4 mx-auto bg-primary overflow-hidden lg:rounded-3xl rounded-xl drop-shadow-2xl py-16">
+        <img src="./dist/img/bgimage.webp" class="w-[2200px] mt-2 mx-auto bg-cover bottom-8 lg:bottom-0 absolute opacity-50 -z-10 scale-150 lg:scale-100" alt="" draggable="false" />
+        <div class="z-10 px-5">
+          <h1 class="text-white text-center font-bold text-3xl lg:text-4xl leading-tight">
+            Berlangganan Dengan Kami<br />
+            Sekarang!
+          </h1>
+          <p class="text-center text-sm lg:text-md text-white opacity-80 py-4">
+            Beragam promo menarik menggumu setiap minggunya, <br />
+            Jadi ayo berlangganan!
+          </p>
+        </div>
+        <form class="w-full self-center max-w-sm mx-auto z-20">
+          <div class="lg:flex justify-center items-center border-secondary py-2">
+            <center>
+              <input
+                class="appearance-none bg-white border-none text-gray-700 border-2 text-sm lg:py-4 lg:pl-5 lg:pr-80 py-2.5 pl-4 pr-10 leading-tight focus:outline-none rounded-full"
+                type="email"
+                placeholder="Masukkan email..."
+                aria-label="Full name"
+              />
+              <br />
+              <button class="ml-1 mt-3 flex-shrink-0 bg-secondary border-secondary rounded-full lg:mr-0 text-sm text-white lg:py-3.5 lg:px-5 py-2 px-4 z-10" type="button">
+                Kirim <i class="inline-flex w-4 ms-2 rounded-sm" data-feather="send"></i>
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="contact" class="pt-16 pb-20 bg-bgcolor">
+      <div class="container mx-auto">
+        <h1 data-aos="fade-down" class="text-primary font-black text-4xl text-center lg:text-6xl">Hubungi Kami</h1>
+        <p data-aos="fade-down" class="text-secondary text-center text-sm lg:text-lg pt-3 lg:w-auto w-52 mx-auto mt-3">Hubungi kami dengan menekan sosial media kami dibawah ini!</p>
+        <div class="list w-full mx-auto mt-5 justify-self-center">
+          <center>
+            <ul class="mx-auto self-center lg:inline-flex lg:gap-36 text-bgcolor grid grid-cols-2">
+              <li data-aos="fade-down" class="mt-12">
+                <button class="w-auto lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                  <a class="text-bgcolor py-auto" href="mailto:abimanyu.ari.d.123@gmail.com"><i data-feather="mail"></i></a>
+                </button>
+                <p class="text-secondary mt-2">EMAIL</p>
+                <p class="text-primary mt-2 break-words mx-1">Rizzcookies@gmail.com</p>
+              </li>
+              <li data-aos="fade-down" class="mt-12">
+                <button class="w-auto lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                  <a class="text-bgcolor py-auto" href="https://instagram.com/rassya.fadhil/"><i data-feather="instagram"></i></a>
+                </button>
+                <p class="text-secondary mt-2">INSTA</p>
+                <p class="text-primary mt-2">@Rizzcookies</p>
+              </li>
+              <li data-aos="fade-down" class="mt-12">
+                <button class="w-auto lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                  <a class="text-bgcolor py-auto" href="https://wa.me/+6282245856525">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#FFFFF0"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></i></a>
+                </button>
+                <p class="text-secondary mt-2">WHATSAPP</p>
+                <p class="text-primary mt-2">+62 822-4585-6525</p>
+              </li>
+              <li data-aos="fade-down" class="mt-12">
+                <button class="w-auto lg:text-xl rounded-full text-center justify-center inline-flex text-bgcolor bg-secondary p-4 text-sm font-medium transition hover:scale-105">
+                  <a class="text-bgcolor py-auto" href="#"><i data-feather="shopping-bag"></i></a>
+                </button>
+                <p class="text-secondary mt-2">MARKETPLACE</p>
+                <p class="text-primary mt-2">RizzCookies</p>
+              </li>
+            </ul>
+          </center>
+        </div>
+        <div class="container mx-auto pt-20 pb-20">
+          <h1 class="text-center font-black text-3xl text-primary mb-8"> <span class="text-secondary">Temukan</span> kami!</h1>
+          <iframe
+            class="mx-auto w-11/12 lg:w-3/4 rounded-xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9870592768693!2d112.72280387465376!3d-7.466679692544917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e6d71181af21%3A0x4232ab0204ccbfe5!2sSMK%20TELKOM%20Sidoarjo!5e0!3m2!1sid!2sid!4v1684755111272!5m2!1sid!2sid"
+            width="700"
+            height="600"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <footer aria-label="Site Footer" class="bg-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+        <path
+          fill="#FFFFF0"
+          fill-opacity="1"
+          d="M0,128L30,138.7C60,149,120,171,180,154.7C240,139,300,85,360,58.7C420,32,480,32,540,53.3C600,75,660,117,720,117.3C780,117,840,75,900,69.3C960,64,1020,96,1080,128C1140,160,1200,192,1260,176C1320,160,1380,96,1410,64L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="flex justify-center">
+          <h1 class="font-black text-bgcolor text-3xl lg:text-4xl">Rizzcookies.</h1>
+        </div>
+        <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-white opacity-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum itaque neque.</p>
+
+        <nav aria-label="Footer Nav" class="mt-12">
+          <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+            <li>
+              <a class="text-white transition hover:text-white/70" href="#home"> Home </a>
+            </li>
+
+            <li>
+              <a class="text-white transition hover:text-white/75" href="#about"> About </a>
+            </li>
+
+            <li>
+              <a class="text-white transition hover:text-white/75" href="#cotd"> Cookies OF The Day </a>
+            </li>
+
+            <li>
+              <a class="text-white transition hover:text-white/75" href="#produk"> Product </a>
+            </li>
+
+            <li>
+              <a class="text-white transition hover:text-white/75" href="#contact"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+          <li>
+            <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="#FFFFF0" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/rassya.fadhil/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+              <span class="sr-only">Instagram</span>
+              <svg class="h-6 w-6" fill="#FFFFF0" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/+6282245856525" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+              <span class="sr-only">Whatsapp</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="#FFFFF0"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+              <span class="sr-only">GitHub</span>
+              <svg class="h-6 w-6" fill="#FFFFF0" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <hr class="mt-20 mx-auto w-9/12" />
+        <p class="mt-5 text-white text-center">&copy; 2023, Rizzcookies. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./dist/js/script.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </body>
+</html>
